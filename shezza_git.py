@@ -152,6 +152,12 @@ if __name__ == "__main__":
             query = query.replace('open', "")
             webbrowser.get(chrome_path).open(query)
             speak("What else can I do for you?")
+        
+        elif 'play music' in query:
+            music_dir = 'D:\\Music'
+            songs = os.listdir(music_dir)
+            # print(songs)
+            os.startfile(os.path.join(music_dir, songs[0]))
 
         elif 'the time' in query:
             curr_time = datetime.datetime.now().strftime("%H:%M:%S")
