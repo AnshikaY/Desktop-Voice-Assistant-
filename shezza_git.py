@@ -147,6 +147,10 @@ if __name__ == "__main__":
             path = "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
             os.startfile(path)
             speak("What else can I do for you?")
+        elif "shoping" in query:
+            speak("it seems that you are in good mood")
+            webbrowser.open("amazon.com")
+            speak("here you are")
 
         elif 'open' in query:
             query = query.replace('open', "")
